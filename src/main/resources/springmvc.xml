@@ -19,8 +19,10 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 	<!-- org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter -->
 	<mvc:annotation-driven></mvc:annotation-driven>
 
+	<!-- web.xml里配置了<url-pattern>/</url-pattern>，因为除了jsp不拦截别的都拦截，所以指定下面路径 -->
 	<!-- 静态资源 -->
 	<!-- 前面为实际存储地址，后面为url访问时的地址 -->
+	<!-- /表示项目根目录    js/*表示该文件夹下的所有子文件   js/**表示该文件夹下的所有子文件及子文件夹中的文件 -->
 	<mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
 	<mvc:resources location="/css/" mapping="/css/**"></mvc:resources>
 	<mvc:resources location="/images/" mapping="/images/**"></mvc:resources>
